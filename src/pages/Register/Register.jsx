@@ -1,26 +1,33 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 const Register = () => {
-    const { createUser,user } = useContext(AuthContext);
+    const { createUser,updateUserProfile } = useContext(AuthContext);
     // console.log(user);
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm()
-    
+      const navigate = useNavigate();
+      const location = useLocation();
+      const from = location.state || '/'; 
       const onSubmit = (data) =>{ 
-        const { name, email, password, photoURL } = data;
+        const { email, password, name,photoURL } = data;
         createUser(email, password)
         // console.log(data)
-        .then((userCredential) => {
+        .then(() => {
           
-            const user = userCredential.user;
-            console.log(user)
+            // const user = userCredential.user;
+
+            updateUserProfile(name,photoURL)
+            .then(()=>{
+                navigate(from)
+            })
+            // console.log(user)
             Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -32,12 +39,6 @@ const Register = () => {
        
     }
  
-    
-    
-    
-    
-    
-
     return (
         <section>
             <div className="font-[sans-serif] text-[#333] mt-4 p-4 relative">
