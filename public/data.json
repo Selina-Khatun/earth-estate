@@ -1,0 +1,107 @@
+[
+  {
+
+    "estate_title": "Tranquil Lakeside Property",
+    "id": 1,
+    "segment_name": "Land",
+    "description": "Escape to this tranquil lakeside property, where serenity meets luxury. Situated on the shores of a pristine lake, this estate offers a luxurious waterfront home, private dock, and breathtaking views. Perfect for boating, fishing, or simply enjoying the peaceful ambiance.",
+    "price": "$50,000",
+    "status": "rent”",
+    "area": "10 acres",
+    "location": "Lake Tahoe, California",
+    "facilities": ["waterfront home", "private dock", "lake views"],
+    "image": "https://i.ibb.co/YjMCwT2/view-island-middle-lake.jpg"
+
+  },
+  {
+    "estate_title": "Luxurious Ranch Estate",
+    "id": 2,
+    "segment_name": "Land",
+    "description": "Experience luxury living on this expansive ranch estate spanning over 200 acres of pristine countryside. The property features a grand ranch-style mansion, state-of-the-art equestrian facilities, and vast pastures. Ideal for horse enthusiasts, ranchers, or those seeking a private retreat.",
+    "price": "$8,500,000",
+    "status": "sale",
+    "area": "200 acres",
+    "location": "Montana, USA",
+    "facilities": ["mansion", "equestrian facilities", "pastures"],
+    "image": "https://i.ibb.co/djzsxWL/aerial-shot-green-resort-water-park-near-drava-river-slovenia.jpg"
+  },
+  {
+
+    "estate_title": "Majestic Mountain Retreat",
+    "id": 3,
+    "segment_name": "Land",
+    "description": "Discover the majesty of the mountains at this serene retreat nestled in the alpine wilderness. Surrounded by towering peaks and pristine forests, this property offers endless outdoor adventures, from hiking and skiing to wildlife viewing and stargazing.",
+    "price": "$3,800,000",
+    "status": "sale",
+    "area": "50 acres",
+    "location": "Rocky Mountains, USA",
+    "facilities": [
+      "mountain views",
+      "wilderness setting",
+      "outdoor activities"
+    ],
+    "image": "https://i.ibb.co/StBmWKN/wide-shot-clear-blue-sea-near-mountain-covered-with-pine-trees-clear-sky.jpg"
+
+  },
+  {
+    "estate_title": "Picturesque Farmstead",
+    "id": 4,
+    "segment_name": "Land",
+    "description": "Step back in time at this picturesque farmstead nestled in the heart of the countryside. Spread over 100 acres of fertile farmland, this property features a quaint farmhouse, barns, and rolling fields. Perfect for farming, agritourism, or simply enjoying the rural lifestyle.",
+    "price": "$12,000",
+    "status": "rent",
+    "area": "100 acres",
+    "location": "Midwest, USA",
+    "facilities": ["farmhouse", "barns", "farmland"],
+    "image": "https://i.ibb.co/Tqk7xZ5/green-valley-with-trees-clear-sky-background.jpg"
+  },
+  {
+    "estate_title": "Scenic Vineyard Estate",
+    "id": 5,
+    "segment_name": "Land",
+    "description": "Indulge in the beauty of wine country at this scenic vineyard estate. Spanning 30 acres of prime vineyard land, this property features a luxurious villa, tasting room, and panoramic views of rolling vineyards. Ideal for wine connoisseurs, hospitality ventures, or luxury retreats.",
+    "price": "$6,000,000",
+    "status": "sale",
+    "area": "30 acres",
+    "location": "Willamette Valley, Oregon",
+    "facilities": ["villa", "tasting room", "panoramic views"],
+    "image": "https://i.ibb.co/Lnx49Nr/aerial-view-rural-crops-fields-landscape.jpg"
+  },
+  {
+    "estate_title": "Sprawling Plantation Estate",
+    "id": 6,
+    "segment_name": "Land",
+    "description": "Experience Southern charm at this sprawling plantation estate set on 500 acres of fertile land. The property features a historic plantation house, lush gardens, and acres of cultivated crops. Perfect for historic preservation, agricultural endeavors, or a grand residential estate.",
+    "price": "$12,000,000",
+    "status": "sale",
+    "area": "500 acres",
+    "location": "Charleston, South Carolina",
+    "facilities": ["plantation house", "gardens", "cultivated crops"],
+    "image": "https://i.ibb.co/BB34C6N/beautiful-green-field-costa-rican-countryside.jpg"
+  },
+  {
+    "estate_title": "Tranquil Forest Hideaway",
+   
+    "id": 7,
+    "segment_name": "Land",
+    "description": "Discover the beauty of nature at this secluded forest hideaway. Surrounded by towering trees and peaceful streams, this property offers an escape from the hustle and bustle of city life. Enjoy hiking trails, wildlife viewing, and serene forest views from your own private sanctuary.",
+    "price": "$650,000",
+    "status": "sale",
+    "area": "20 acres",
+    "location": "Pacific Northwest, USA",
+    "facilities": ["secluded location", "hiking trails", "stream"],
+    "image": "https://i.ibb.co/ZM2GGXK/path-passing-through-forest.jpg"
+  },
+  {
+    "estate_title": "Idyllic Vineyard Retreat",
+    "id": 8,
+    "segment_name": "Land",
+    "description": "Escape to this enchanting vineyard retreat nestled amidst rolling hills and lush vineyards. This property offers a serene ambiance, with a charming farmhouse, well-manicured gardens, and a fully operational winery. Perfect for wine enthusiasts or those seeking a tranquil countryside escape.",
+    "price": "$4,200,000",
+    "status": "sale",
+    "area": "60 acres",
+    "location": "Santa Ynez Valley, California",
+    "facilities": ["farmhouse", "winery", "gardens"],
+    "image": "https://i.ibb.co/cT65dYL/photorealistic-wooden-house-with-timber-structure.jpg"
+  }
+]

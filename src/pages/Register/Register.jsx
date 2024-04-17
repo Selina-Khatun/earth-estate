@@ -61,7 +61,7 @@ const Register = () => {
                 {/* <button className="btn absolute font-semibold"><Link to={'/'}>Back to home</Link></button> */}
                 <div className="max-w-md w-full mx-auto relative z-50">
 
-                    <div className="border border-gray-300 bg-white rounded-md p-8">
+                    <div className="border border-gray-300 animate__animated animate__backInUp bg-white rounded-md p-8">
 
                         <div className="mb-4">
                             <h3 className="text-2xl font-extrabold">Create an account</h3>
