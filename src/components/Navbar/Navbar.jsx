@@ -49,7 +49,7 @@ const Navbar = () => {
                             <li><p>{user?.
                                 email
                             }</p></li>
-                            <li><button onClick={logout} className="btn bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg  hover:bg-cyan-600">signOut</button></li>
+                            <li><button onClick={logout} className="btn bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg  hover:bg-cyan-600 ">signOut</button></li>
                         </ul>
                     </div>
                         :

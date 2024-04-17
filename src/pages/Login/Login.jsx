@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 const Login = () => {
-    const{signInUser,googleLogin}=useContext(AuthContext);
+    const{signInUser,googleLogin,githubLogin}=useContext(AuthContext);
     const {
         register,
         handleSubmit,
@@ -32,6 +32,7 @@ const Login = () => {
     })
 };
 
+
 const handleGoogleLogin = () => {
   
 
@@ -51,7 +52,25 @@ const handleGoogleLogin = () => {
     })
    
 };
+const handleGithubLogin = () => {
+  
 
+    githubLogin()
+    .then((result)=>{
+        console.log(result.user)
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "You have successfully logged In",
+            showConfirmButton: false,
+            timer: 1500
+          }); 
+    })
+    .catch((error)=>{
+        console.error(error)
+    })
+   
+};
 
     return (
         <section className="h-[90vh]">
@@ -114,7 +133,7 @@ const handleGoogleLogin = () => {
                                 <span>Continue with Google</span>
                             </button>
                             <br />
-                            <button className="flex items-center bg-white border ml-2 border-gray-300 rounded-lg shadow-md px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                            <button onClick={handleGithubLogin} className="flex items-center bg-white border ml-2 border-gray-300 rounded-lg shadow-md px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                 <FaGithub className="mr-1" />
                                 <span>Continue with GitHub</span>
                             </button>
