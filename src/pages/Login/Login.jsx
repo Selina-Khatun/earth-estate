@@ -2,9 +2,10 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 const Login = () => {
     const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
     const {
@@ -12,7 +13,8 @@ const Login = () => {
         handleSubmit,
         formState: { errors },
     } = useForm()
-
+    const [showPassword, setShowPassword] = useState();
+    // const [error1,setError1]=useState('');
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state || '/';
@@ -34,11 +36,21 @@ const Login = () => {
                         timer: 1500
                     });
                 }
-                
+
             })
             .catch(error => {
-                console.log(error);
+                console.log('login error', error);
+                // setError1(error)
+                Swal.fire({
+
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Invalid email or password. Please try again!",
+
+
+                });
             })
+
     };
 
 
@@ -63,9 +75,8 @@ const Login = () => {
             })
 
     };
+
     const handleGithubLogin = () => {
-
-
         githubLogin()
             .then((result) => {
                 // console.log(result.user)
@@ -111,10 +122,15 @@ const Login = () => {
                                                 {...register("email", { required: true })} />
                                         </div>
                                         {errors.email && <span className="font-semibold text-red-500">This field is required</span>}
-                                        <div>
+                                        <div className="relative">
                                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                            <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                {...register("password", { required: true })} />
+
+                                            <input type={showPassword ? 'text' : 'password'} name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                {...register("password", {
+                                                    required: true
+
+                                                })} />
+                                            <span onClick={() => setShowPassword(!showPassword)} className="absolute top-10 right-2">{showPassword ? <AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>}</span>
 
                                         </div>
                                         {errors.password && <span className="font-semibold text-red-500">This field is required</span>}
