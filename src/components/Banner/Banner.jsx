@@ -25,7 +25,7 @@ const Banner = () => {
               <div className="max-w-xl">
                 <h1 className="mb-5 text-5xl text-white font-bold">{item.estate_title}</h1>
                 <p className="mb-5">{item.location}</p>
-                <button>Details</button>
+                <button className='text-cyan-100'>Details</button>
 
               </div>
             </div>

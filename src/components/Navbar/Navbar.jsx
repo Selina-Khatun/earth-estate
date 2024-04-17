@@ -1,12 +1,12 @@
 
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../FirebaseProvider/FirebaseProvider';
-
+import './Navbar.css'
 const Navbar = () => {
     const { logout, user } = useContext(AuthContext);
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,14 +21,68 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+               
+
+               
+                <a  className="logo">
+                    <div className="wrapper">
+                        <p className="text uppercase font-thin">LandMarked</p>
+
+                        <div className="flower flower1">
+                            <div className="petal one"></div>
+                            <div className="petal two"></div>
+                            <div className="petal three"></div>
+                            <div className="petal four"></div>
+                        </div>
+                        <div className="flower flower2">
+                            <div className="petal one"></div>
+                            <div className="petal two"></div>
+                            <div className="petal three"></div>
+                            <div className="petal four"></div>
+                        </div>
+                        <div className="flower flower3">
+                            <div className="petal one"></div>
+                            <div className="petal two"></div>
+                            <div className="petal three"></div>
+                            <div className="petal four"></div>
+                        </div>
+                        <div className="flower flower4">
+                            <div className="petal one"></div>
+                            <div className="petal two"></div>
+                            <div className="petal three"></div>
+                            <div className="petal four"></div>
+                        </div>
+                        <div className="flower flower5">
+                            <div className="petal one"></div>
+                            <div className="petal two"></div>
+                            <div className="petal three"></div>
+                            <div className="petal four"></div>
+                        </div>
+                        <div className="flower flower6">
+                            <div className="petal one"></div>
+                            <div className="petal two"></div>
+                            <div className="petal three"></div>
+                            <div className="petal four"></div>
+                        </div>
+                    </div>
+                </a>
+
+
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><NavLink to={'/'}>Home</NavLink></li>
-                    <li><NavLink to={'/about'}>about</NavLink></li>
-                    <li><NavLink to={'/details'}>details</NavLink></li>
-                    <li><NavLink to={'/register'}>Register</NavLink></li>
+                <ul className="menu gap-5 text-lg justify-center items-center menu-horizontal px-1">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                    } to={'/'}>Home</NavLink>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? " text-cyan-100  border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                    } to={'/about'}>about</NavLink>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                    } to={'/details'}>details</NavLink>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                    } to={'/register'}>Register</NavLink>
                 </ul>
             </div>
 

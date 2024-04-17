@@ -59,7 +59,7 @@ const Register = () => {
         <section>
             <div className="font-[sans-serif] text-[#333] mt-4 p-4 relative">
                 {/* <button className="btn absolute font-semibold"><Link to={'/'}>Back to home</Link></button> */}
-                <div className="max-w-md w-full mx-auto relative z-50">
+                <div className="max-w-md w-full mx-auto relative z-40">
 
                     <div className="border border-gray-300 animate__animated animate__backInUp bg-white rounded-md p-8">
 

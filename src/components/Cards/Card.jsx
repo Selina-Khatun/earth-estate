@@ -1,6 +1,7 @@
 import { FaLocationDot } from "react-icons/fa6";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 AOS.init({ duration: 1000 });
 const Card = ({ item }) => {
     const { estate_title, segment_name, price, status, area, image, location } = item;
@@ -33,12 +34,14 @@ const Card = ({ item }) => {
                     </div>
                   
                  <p  className="flex items-center gap-3"> <FaLocationDot />{location}</p>
+                   <Link to={'/details'}>
                    <button className="scene  my-5">
                         <div className="cube">
-                            <span className="side top  bg-cyan-950">View Property</span>
+                            <span className="side top  ">View Property</span>
                             <span className="side front">View Property</span>
                         </div>
                     </button>
+                   </Link>
                    
                 </div>
                

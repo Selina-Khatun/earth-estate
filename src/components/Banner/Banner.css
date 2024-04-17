@@ -5,7 +5,7 @@ button {
     border: 0;
     width: var(--width);
     padding-block: 1em;
-    color: #fff;
+    /* color: #fff; */
     font-weight: bold;
     font-size: 1em;
     background: #1c72a7;
