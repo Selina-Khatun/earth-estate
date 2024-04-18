@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
 AOS.init({ duration: 1000 });
 const Card = ({ item }) => {
-    const { estate_title, segment_name, price, status, area, image, location } = item;
+    const {id, estate_title, segment_name, price, status, area, image, location } = item;
     return (
         <div data-aos="fade-up">
             <div className="flex flex-col group bg-white border shadow-sm rounded-xl overflow-hidden hover:shadow-2xl  transition">
@@ -34,7 +34,8 @@ const Card = ({ item }) => {
                     </div>
                   
                  <p  className="flex items-center gap-3"> <FaLocationDot />{location}</p>
-                   <Link to={'/details'}>
+                   <Link to={`/details/${id}`}>
+                    {/*  <Link to={`/cards/${bookId}`}> */}
                    <button className="scene  my-5">
                         <div className="cube">
                             <span className="side top  ">View Property</span>

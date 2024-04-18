@@ -3,8 +3,8 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Details from "../pages/Details/Details"; 
-import About from "../pages/About/About"; 
+import Details from "../pages/Details/Details";
+import About from "../pages/About/About";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -13,13 +13,20 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children: [
       {
-        path: "/", 
+        path: "/",
         element: <Home></Home>
       },
       {
-        path: '/details',
-        element: <PrivateRoute><Details></Details></PrivateRoute>
+        path: '/details/:id',
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: () => fetch('/data.json')
       },
+      // {
+      //   path: "/cards/:id",
+      //   element: <CardDetails></CardDetails>,
+      //   loader:()=>fetch("/data.json")
+
+      // },
       {
         path: '/about',
         element: <PrivateRoute><About></About></PrivateRoute>

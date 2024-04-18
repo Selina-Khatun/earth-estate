@@ -6,7 +6,7 @@
     "segment_name": "Land",
     "description": "Escape to this tranquil lakeside property, where serenity meets luxury. Situated on the shores of a pristine lake, this estate offers a luxurious waterfront home, private dock, and breathtaking views. Perfect for boating, fishing, or simply enjoying the peaceful ambiance.",
     "price": "$50,000",
-    "status": "rent”",
+    "status": "rent",
     "area": "10 acres",
     "location": "Lake Tahoe, California",
     "facilities": ["waterfront home", "private dock", "lake views"],

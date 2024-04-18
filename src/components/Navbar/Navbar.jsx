@@ -17,7 +17,7 @@ const Navbar = () => {
                         <li><NavLink to={'/login'}> Login</NavLink></li>
                         <li><NavLink to={'/register'}>Register</NavLink></li>
                         <li><NavLink to={'/about'}>about</NavLink></li>
-                        <li><NavLink to={'/details'}>details</NavLink></li>
+                        {/* <li><NavLink to={'/details'}>details</NavLink></li> */}
 
                     </ul>
                 </div>
@@ -72,16 +72,16 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu gap-5 text-lg justify-center items-center menu-horizontal px-1">
                     <NavLink className={({ isActive }) =>
-                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
                     } to={'/'}>Home</NavLink>
                     <NavLink className={({ isActive }) =>
-                        isActive ? " text-cyan-100  border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                        isActive ? " text-cyan-100  border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
                     } to={'/about'}>about</NavLink>
-                    <NavLink className={({ isActive }) =>
+                    {/* <NavLink className={({ isActive }) =>
                         isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
-                    } to={'/details'}>details</NavLink>
+                    } to={'/details'}>details</NavLink> */}
                     <NavLink className={({ isActive }) =>
-                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
+                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
                     } to={'/register'}>Register</NavLink>
                 </ul>
             </div>
