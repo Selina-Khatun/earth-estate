@@ -22,7 +22,7 @@ const FirebaseProvider = ({ children }) => {
                 .then(data => {
                     // console.log(data)
                     setData(data);
-                    setLoading(false);
+                    setLoading(true);
                 });
         }, [])
     
@@ -63,6 +63,7 @@ const FirebaseProvider = ({ children }) => {
     }, [])
     const logout = () => {
         signOut(auth)
+
         setUser(null)
     }
     const allValues = { createUser, user, signInUser, googleLogin, logout, githubLogin, loading, updateUserProfile,data}

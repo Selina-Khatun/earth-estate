@@ -96,6 +96,15 @@ const Login = () => {
             })
             .catch((error) => {
                 console.error(error)
+                Swal.fire({
+
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Invalid email or password. Please try again!",
+
+
+                });
+                
             })
 
     };
