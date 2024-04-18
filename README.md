@@ -19,5 +19,5 @@
     "sweetalert2": "^11.10.7",
     "swiper": "^11.1.1"
 ```
-# [live site: LANDMARKED Website](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) 
+# [live site: LANDMARKED Website](https://6621569cc2698f1a4fbb96b6--zingy-alpaca-6d0090.netlify.app/) 
 
