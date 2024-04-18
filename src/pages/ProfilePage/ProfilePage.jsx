@@ -32,7 +32,7 @@ const ProfilePage = () => {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "You have successfully logged In with Google",
+                title: "Your Profile updated successfully",
                 showConfirmButton: false,
                 timer: 1500
             });

@@ -6,12 +6,7 @@ const Footer = () => {
         <footer className="flex flex-col bg-cyan-950 p-[5%] mt-[10%] space-y-10 justify-center ">
 
             <nav className="flex justify-center flex-wrap gap-6 text-cyan-100 font-medium">
-                {/* <a className="hover:text-gray-900" href="#">Home</a>
-                <a className="hover:text-gray-900" href="#">About</a>
-                <a className="hover:text-gray-900" href="#">Services</a>
-                <a className="hover:text-gray-900" href="#">Media</a>
-                <a className="hover:text-gray-900" href="#">Gallery</a>
-                <a className="hover:text-gray-900" href="#">Contact</a> */}
+               
                 <li className="list-none"><NavLink to={'/'}>Home</NavLink></li>
                 <li className="list-none"><NavLink to={'/login'}> Login</NavLink></li>
                 <li className="list-none"><NavLink to={'/register'}>Register</NavLink></li>
