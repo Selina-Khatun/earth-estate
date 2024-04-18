@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
+import ProfilePage from "../ProfilePage/ProfilePage";
 
 const About = () => {
+
+
     return (
         <div>
-            this is about page
+            <Helmet>
+                <title>LANDMARKED || About</title>
+
+            </Helmet>
+        
+            <ProfilePage></ProfilePage>
         </div>
     );
 };

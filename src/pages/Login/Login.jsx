@@ -7,15 +7,16 @@ import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import 'animate.css';
+import { Helmet } from "react-helmet-async";
 const Login = () => {
-    const { signInUser, googleLogin, githubLogin} = useContext(AuthContext);
+    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm()
     const [showPassword, setShowPassword] = useState();
-    
+
     // const [error1,setError1]=useState('');
     const navigate = useNavigate();
     const location = useLocation();
@@ -102,6 +103,10 @@ const Login = () => {
     return (
         <section className="h-[98vh]">
 
+            <Helmet>
+                <title>LANDMARKED || Loing</title>
+
+            </Helmet>
             <div className=" py-3  sm:py-12">
                 {/* <button className="btn absolute font-semibold"><Link to={'/'}>Back to home</Link></button> */}
                 <div className="relative py-3 animate__animated  animate__backInDown max-w-lg sm:mx-auto ">

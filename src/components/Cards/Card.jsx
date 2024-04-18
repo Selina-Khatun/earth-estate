@@ -16,10 +16,10 @@ const Card = ({ item }) => {
                         {estate_title}
                     </h3>
                     <div className='flex  justify-between '>
-                        <p className="mt-1 text-gray-500">
+                        <p className="mt-1 text-cyan-500">
                             {area}
                         </p>
-                        <p className="mt-1 text-gray-500">
+                        <p className="mt-1 text-cyan-500">
                             {segment_name}
                         </p>
 

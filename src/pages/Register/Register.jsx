@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { Helmet } from "react-helmet-async";
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     // console.log(user);
@@ -47,6 +48,7 @@ const Register = () => {
                 });
                 updateUserProfile(name, photoURL)
                     .then(() => {
+                        
                         navigate(from)
                     })
                 // console.log(user)
@@ -57,6 +59,10 @@ const Register = () => {
 
     return (
         <section>
+            <Helmet>
+                <title>LANDMARKED || Register</title>
+                
+            </Helmet>
             <div className="font-[sans-serif] text-[#333] mt-4 p-4 relative">
                 {/* <button className="btn absolute font-semibold"><Link to={'/'}>Back to home</Link></button> */}
                 <div className="max-w-md w-full mx-auto relative z-40">

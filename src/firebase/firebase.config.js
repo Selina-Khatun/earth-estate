@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBvynNvPH6MukY-Ji7GW4v0fTZzrr59sOM",
-  authDomain: "earth-estate.firebaseapp.com",
-  projectId: "earth-estate",
-  storageBucket: "earth-estate.appspot.com",
-  messagingSenderId: "875171893419",
-  appId: "1:875171893419:web:e36e2cedeaa481f21467ee"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

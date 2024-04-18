@@ -16,56 +16,21 @@ const Navbar = () => {
                         <li><NavLink to={'/'}>Home</NavLink></li>
                         <li><NavLink to={'/login'}> Login</NavLink></li>
                         <li><NavLink to={'/register'}>Register</NavLink></li>
-                        <li><NavLink to={'/about'}>about</NavLink></li>
-                        {/* <li><NavLink to={'/details'}>details</NavLink></li> */}
+                        <li><NavLink to={'/about'}>About</NavLink></li>
+                        <li><NavLink to={'/cards'}>Properties</NavLink></li>
 
                     </ul>
                 </div>
                
 
                
-                <a  className="logo">
-                    <div className="wrapper">
-                        <p className="text uppercase font-thin">LandMarked</p>
-
-                        <div className="flower flower1">
-                            <div className="petal one"></div>
-                            <div className="petal two"></div>
-                            <div className="petal three"></div>
-                            <div className="petal four"></div>
-                        </div>
-                        <div className="flower flower2">
-                            <div className="petal one"></div>
-                            <div className="petal two"></div>
-                            <div className="petal three"></div>
-                            <div className="petal four"></div>
-                        </div>
-                        <div className="flower flower3">
-                            <div className="petal one"></div>
-                            <div className="petal two"></div>
-                            <div className="petal three"></div>
-                            <div className="petal four"></div>
-                        </div>
-                        <div className="flower flower4">
-                            <div className="petal one"></div>
-                            <div className="petal two"></div>
-                            <div className="petal three"></div>
-                            <div className="petal four"></div>
-                        </div>
-                        <div className="flower flower5">
-                            <div className="petal one"></div>
-                            <div className="petal two"></div>
-                            <div className="petal three"></div>
-                            <div className="petal four"></div>
-                        </div>
-                        <div className="flower flower6">
-                            <div className="petal one"></div>
-                            <div className="petal two"></div>
-                            <div className="petal three"></div>
-                            <div className="petal four"></div>
-                        </div>
-                    </div>
-                </a>
+               <div>
+               <div>
+               <img className='w-[10%] top-0 left-2 -mt-1 rotate-12 absolute z-40' src="https://i.ibb.co/MD4T7d0/23-05-removebg-preview.png" alt="" />
+               <p className=" uppercase relative ml-12 font-bold text-cyan-800"><i>LandMarked</i></p>
+               </div>
+           
+               </div>
 
 
             </div>
@@ -74,12 +39,13 @@ const Navbar = () => {
                     <NavLink className={({ isActive }) =>
                         isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
                     } to={'/'}>Home</NavLink>
+                    
+                    <NavLink className={({ isActive }) =>
+                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
+                    } to={'/cards'}>Properties</NavLink>
                     <NavLink className={({ isActive }) =>
                         isActive ? " text-cyan-100  border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
                     } to={'/about'}>about</NavLink>
-                    {/* <NavLink className={({ isActive }) =>
-                        isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4"
-                    } to={'/details'}>details</NavLink> */}
                     <NavLink className={({ isActive }) =>
                         isActive ? " text-cyan-100 border-2 bg-cyan-800 px-4 rounded-lg py-2 mr-5  border-cyan-700 underline" : "font-bold mr-4 text-cyan-800"
                     } to={'/register'}>Register</NavLink>
