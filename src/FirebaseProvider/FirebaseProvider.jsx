@@ -22,8 +22,11 @@ const FirebaseProvider = ({ children }) => {
                 .then(data => {
                     // console.log(data)
                     setData(data);
-                    setLoading(true);
+                   
                 });
+//                 // After loading the data inside 
+// the useEffect,setLoading True must be given(here)  under the Fetch. otherwise it will be loaded...... 
+                setLoading(true);
         }, [])
     
     const googleLogin = () => {
