@@ -15,20 +15,20 @@ const FirebaseProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     // console.log(user);
-   
-        useEffect(() => {
-            fetch('data.json')
-                .then(res => res.json())
-                .then(data => {
-                    // console.log(data)
-                    setData(data);
-                   
-                });
-//                 // After loading the data inside 
-// the useEffect,setLoading True must be given(here)  under the Fetch. otherwise it will be loaded...... 
-                setLoading(true);
-        }, [])
-    
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                setData(data);
+
+            });
+         // After loading the data inside 
+        // the useEffect,setLoading True must be given(here)  under the Fetch. otherwise it will be loaded...... 
+        setLoading(true);
+    }, [])
+
     const googleLogin = () => {
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
@@ -69,7 +69,7 @@ const FirebaseProvider = ({ children }) => {
 
         setUser(null)
     }
-    const allValues = { createUser, user, signInUser, googleLogin, logout, githubLogin, loading, updateUserProfile,data}
+    const allValues = { createUser, user, signInUser, googleLogin, logout, githubLogin, loading, updateUserProfile, data }
     return (
         <AuthContext.Provider value={allValues}>
             {children}
